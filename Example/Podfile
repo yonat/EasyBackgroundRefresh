@@ -1,0 +1,5 @@
+use_frameworks!
+
+pod 'EasyBackgroundRefresh', :path => '..'
+
+target 'EasyBackgroundRefreshDemo'

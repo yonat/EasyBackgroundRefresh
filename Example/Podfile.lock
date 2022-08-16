@@ -1,0 +1,16 @@
+PODS:
+  - EasyBackgroundRefresh (1.0.0)
+
+DEPENDENCIES:
+  - EasyBackgroundRefresh (from `..`)
+
+EXTERNAL SOURCES:
+  EasyBackgroundRefresh:
+    :path: ".."
+
+SPEC CHECKSUMS:
+  EasyBackgroundRefresh: 4ffbd902eb50321c351fdef9c7cf03423ffee77f
+
+PODFILE CHECKSUM: 58773400341fb8883b0b6e76c5badbe757eb6625
+
+COCOAPODS: 1.11.3
