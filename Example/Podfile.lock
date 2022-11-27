@@ -1,16 +1,37 @@
 PODS:
   - EasyBackgroundRefresh (1.0.0)
+  - SwiftFormat/CLI (0.50.4)
+  - SwiftLint (0.50.1)
+  - SwiftQuality (2.0.0):
+    - SwiftFormat/CLI (= 0.50.4)
+    - SwiftLint (= 0.50.1)
 
 DEPENDENCIES:
   - EasyBackgroundRefresh (from `..`)
+  - SwiftQuality (from `https://github.com/yonat/SwiftQuality`)
+
+SPEC REPOS:
+  trunk:
+    - SwiftFormat
+    - SwiftLint
 
 EXTERNAL SOURCES:
   EasyBackgroundRefresh:
     :path: ".."
+  SwiftQuality:
+    :git: https://github.com/yonat/SwiftQuality
+
+CHECKOUT OPTIONS:
+  SwiftQuality:
+    :commit: a5d464f7de98c03ecbbf0c60c4124faeac67633e
+    :git: https://github.com/yonat/SwiftQuality
 
 SPEC CHECKSUMS:
   EasyBackgroundRefresh: 4ffbd902eb50321c351fdef9c7cf03423ffee77f
+  SwiftFormat: 42b2e7e390bffa30ea7a9f2dd8c8872d37f6a093
+  SwiftLint: 6b0cf1f4d619808dbc16e4fab064ce6fc79f090b
+  SwiftQuality: 890e271defff439147373b686a9261dbc1f0c7f6
 
-PODFILE CHECKSUM: 58773400341fb8883b0b6e76c5badbe757eb6625
+PODFILE CHECKSUM: ccd0c643a6e94f448939609d43e8094a0d94efdd
 
 COCOAPODS: 1.11.3

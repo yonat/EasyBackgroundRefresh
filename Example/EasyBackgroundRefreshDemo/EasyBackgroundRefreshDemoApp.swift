@@ -10,7 +10,6 @@ import SwiftUI
 
 @main
 struct EasyBackgroundRefreshDemoApp: App {
-
     // force init before app finishes launching:
     let backgroundRefresh = EasyBackgroundRefresh.default
 

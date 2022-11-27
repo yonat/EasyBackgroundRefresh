@@ -63,7 +63,7 @@ open class EasyBackgroundRefresh {
         BGTaskScheduler.shared.register(
             forTaskWithIdentifier: taskIdentifier,
             using: nil,
-            launchHandler: self.handleBackgroundRefresh(task:)
+            launchHandler: handleBackgroundRefresh(task:)
         )
         notificationObservation = NotificationCenter.default.addObserver(
             forName: UIApplication.didEnterBackgroundNotification,
@@ -80,9 +80,9 @@ open class EasyBackgroundRefresh {
     private var autoCompleteDispatchWorkItem: DispatchWorkItem?
 
     private func scheduleBackgroundRefresh() {
-#if targetEnvironment(simulator)
+        #if targetEnvironment(simulator)
         print("EasyBackgroundRefresh: No background app refresh on simulator :-(")
-#else
+        #else
         do {
             let request = BGAppRefreshTaskRequest(identifier: taskIdentifier)
             if backgroundFetchDelay > 0 {
@@ -90,16 +90,16 @@ open class EasyBackgroundRefresh {
             }
             try BGTaskScheduler.shared.submit(request)
 
-#if DEBUG
+            #if DEBUG
             // to simulate background refresh during development, add a breakpoint in the next line
             // and execute this debugger command (replacing TASK_IDENTIFIER):
             //   e -l objc -- (void)[[BGTaskScheduler sharedScheduler] _simulateLaunchForTaskWithIdentifier:@"TASK_IDENTIFIER"]
             print("EasyBackgroundRefresh: Submitted background refresh request")
-#endif
+            #endif
         } catch {
             fatalError("EasyBackgroundRefresh: Failed submitting BGAppRefreshTaskRequest: \(error)")
         }
-#endif
+        #endif
     }
 
     private func handleBackgroundRefresh(task: BGTask) {
@@ -142,7 +142,7 @@ open class EasyBackgroundRefresh {
     private func endBackgroundTask() {
         autoCompleteDispatchWorkItem?.cancel()
         autoCompleteDispatchWorkItem = nil
-        if let backgroundTaskIdentifier = self.backgroundTaskIdentifier {
+        if let backgroundTaskIdentifier = backgroundTaskIdentifier {
             UIApplication.shared.endBackgroundTask(backgroundTaskIdentifier)
             self.backgroundTaskIdentifier = nil
         }
