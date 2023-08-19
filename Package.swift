@@ -13,7 +13,8 @@ let package = Package(
     targets: [
         .target(
             name: "EasyBackgroundRefresh",
-            dependencies: []
+            dependencies: [],
+            resources: [.copy("PrivacyInfo.xcprivacy")]
         ),
     ],
     swiftLanguageVersions: [.v5]
