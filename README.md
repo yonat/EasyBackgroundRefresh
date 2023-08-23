@@ -62,7 +62,7 @@ pod 'EasyBackgroundRefresh'
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/yonat/EasyBackgroundRefresh", from: "1.0.1")
+    .package(url: "https://github.com/yonat/EasyBackgroundRefresh", from: "1.0.2")
 ]
 ```
 
