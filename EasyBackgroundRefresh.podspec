@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'EasyBackgroundRefresh'
-  s.version      = '1.0.3'
+  s.version      = '1.0.4'
   s.summary      = 'Easy background refresh registration, scheduling, execution, and completion. BGTaskScheduler for the lazy.'
   s.homepage     = 'https://github.com/yonat/EasyBackgroundRefresh'
   s.license      = { :type => 'MIT', :file => 'LICENSE.txt' }
