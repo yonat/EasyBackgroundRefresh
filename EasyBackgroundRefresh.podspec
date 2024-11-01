@@ -13,6 +13,6 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => 'https://github.com/yonat/EasyBackgroundRefresh.git', :tag => s.version }
   s.source_files  = 'Sources/EasyBackgroundRefresh/*.swift'
-  s.resource_bundles = {s.name => ['PrivacyInfo.xcprivacy']}
+  s.resource_bundles = {s.name => ['Sources/EasyBackgroundRefresh/PrivacyInfo.xcprivacy']}
 
 end
